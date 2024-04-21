@@ -23,6 +23,25 @@
     
     
     <entry>
+      <title>Git本地项目上传Gitee仓库</title>
+      <link href="/2024/04/21/Git%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0Gitee%E4%BB%93%E5%BA%93/"/>
+      <url>/2024/04/21/Git%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0Gitee%E4%BB%93%E5%BA%93/</url>
+      
+        <content type="html"><![CDATA[<p>参考： <a href="https://blog.csdn.net/weixin_46508271/article/details/121202829">https://blog.csdn.net/weixin_46508271/article/details/121202829</a></p><h3 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h3><ol><li><p>本地电脑安装 Git 客户端</p></li><li><p>本地已有项目</p></li><li><p>Gitee 注册好了账户</p></li></ol><h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><h4 id="1-、登录码云"><a href="#1-、登录码云" class="headerlink" title="1 、登录码云"></a>1 、登录码云</h4><p><a href="https://gitee.com/">https://gitee.com</a><br>点击个人头像旁边的加号，选择新建仓库<br><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100942680.png" alt="image.png"></p><h4 id="2-、填写相关信息"><a href="#2-、填写相关信息" class="headerlink" title="2 、填写相关信息"></a>2 、填写相关信息</h4><p><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100943260.png" alt="image.png"><br>创建后得到远程仓库：<br><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100943379.png" alt="image.png"></p><h4 id="3-、在本地项目文件夹右击鼠标点击-Git-Bash-Here"><a href="#3-、在本地项目文件夹右击鼠标点击-Git-Bash-Here" class="headerlink" title="3 、在本地项目文件夹右击鼠标点击 Git Bash Here"></a>3 、在本地项目文件夹右击鼠标点击 Git Bash Here</h4><h4 id="4-、输入-git-init，这个目录变成-git-可以管理的仓库，会出现一个-Git-文件夹，如果没出现的话需要选择“显示隐藏文件”（不会的同学自行百度一下）"><a href="#4-、输入-git-init，这个目录变成-git-可以管理的仓库，会出现一个-Git-文件夹，如果没出现的话需要选择“显示隐藏文件”（不会的同学自行百度一下）" class="headerlink" title="4 、输入 git init，这个目录变成 git 可以管理的仓库，会出现一个. Git 文件夹，如果没出现的话需要选择“显示隐藏文件”（不会的同学自行百度一下）"></a>4 、输入<code> git init</code>，这个目录变成 git 可以管理的仓库，会出现一个. Git 文件夹，如果没出现的话需要选择“显示隐藏文件”（不会的同学自行百度一下）</h4><p><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100944023.png" alt="image.png"></p><h4 id="5-、绑定本地仓库与远程仓库：git-remote-add-origin-远程仓库的具体地址"><a href="#5-、绑定本地仓库与远程仓库：git-remote-add-origin-远程仓库的具体地址" class="headerlink" title="5 、绑定本地仓库与远程仓库：git remote add origin [远程仓库的具体地址]"></a>5 、绑定本地仓库与远程仓库：<code>git remote add origin [远程仓库的具体地址]</code></h4><p><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100944486.png" alt="image.png"></p><h4 id="6-、添加文件到暂存区：git-add-注意后面的点表示目录下的所有文件，点前面还有一个空格不要漏掉了"><a href="#6-、添加文件到暂存区：git-add-注意后面的点表示目录下的所有文件，点前面还有一个空格不要漏掉了" class="headerlink" title="6 、添加文件到暂存区：git add .(注意后面的点表示目录下的所有文件，点前面还有一个空格不要漏掉了)"></a>6 、添加文件到暂存区：<code>git add .</code>(注意后面的点表示目录下的所有文件，点前面还有一个空格不要漏掉了)</h4><h4 id="7-、将暂存区的文件提交至仓库中：git-commit-m-本次的提交信息"><a href="#7-、将暂存区的文件提交至仓库中：git-commit-m-本次的提交信息" class="headerlink" title="7 、将暂存区的文件提交至仓库中：git commit -m &#39;本次的提交信息&#39;"></a>7 、将暂存区的文件提交至仓库中：<code>git commit -m &#39;本次的提交信息&#39;</code></h4><h4 id="8-、远程库与本地同步合并，-git-pull-origin-master"><a href="#8-、远程库与本地同步合并，-git-pull-origin-master" class="headerlink" title="8 、远程库与本地同步合并， git pull origin master"></a>8 、远程库与本地同步合并， <code>git pull origin master</code></h4><p>注意，此处可能会报错：fatal: refusing to merge unrelated histories<br><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100944830.png" alt="image.png"></p><p>问题产生原因：本地库和远程库没有相关性，然后本地要去推送到远端，远端觉得这个本地库跟自己不相干，所以告知无法合并。<br>解决方法：操作命令后面加 –allow-unrelated-histories 变为：<br><code>git pull origin master --allow-unrelated-histories</code></p><h4 id="9、-将本地的分支版本上传到远程并合并-git-push-origin-master"><a href="#9、-将本地的分支版本上传到远程并合并-git-push-origin-master" class="headerlink" title="9、 将本地的分支版本上传到远程并合并: git push origin master"></a>9、 将本地的分支版本上传到远程并合并: <code>git push origin master</code></h4><p><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100944280.png" alt="image.png"></p><h4 id="10、大功告成"><a href="#10、大功告成" class="headerlink" title="10、大功告成"></a>10、大功告成</h4><p><img src="https://gitee.com/BIGDragon962464/my-picture/raw/master/Picture/202308100945666.png" alt="image.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>22</title>
       <link href="/2024/04/21/22/"/>
       <url>/2024/04/21/22/</url>
