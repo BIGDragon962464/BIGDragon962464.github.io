@@ -4,6 +4,101 @@
   
     
     <entry>
+      <title>Linux 安装 Nginx</title>
+      <link href="/2024/04/21/Linux%20%E5%AE%89%E8%A3%85%20Nginx/"/>
+      <url>/2024/04/21/Linux%20%E5%AE%89%E8%A3%85%20Nginx/</url>
+      
+        <content type="html"><![CDATA[<h6 id="1-安装依赖和相关库："><a href="#1-安装依赖和相关库：" class="headerlink" title="1.安装依赖和相关库："></a>1.安装依赖和相关库：</h6><p><code>yum -y install gcc-c++ zlib-devel openssl-devel libtool</code></p><h6 id="2-下载nginx安装包并解压："><a href="#2-下载nginx安装包并解压：" class="headerlink" title="2.下载nginx安装包并解压："></a>2.下载nginx安装包并解压：</h6><p><code>cd /usr/local</code><br><code>wget http://nginx.org/download/nginx-1.14.0.tar.gz</code><br><code>tar -zxvf nginx-1.14.0.tar.gz</code></p><h6 id="3-配置和安装"><a href="#3-配置和安装" class="headerlink" title="3.配置和安装"></a>3.配置和安装</h6><p><code>cd nginx-1.14.0</code><br><code>./configure --prefix=/usr/local/nginx</code><br><code>make &amp;&amp; make install</code></p><h6 id="4-启动Nginx："><a href="#4-启动Nginx：" class="headerlink" title="4.启动Nginx："></a>4.启动Nginx：</h6><p><code>cd ../nginx/sbin</code><br><code>./nginx</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux基础</title>
+      <link href="/2024/04/21/Linux%E5%9F%BA%E7%A1%80/"/>
+      <url>/2024/04/21/Linux%E5%9F%BA%E7%A1%80/</url>
+      
+        <content type="html"><![CDATA[<h6 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h6><p><code>chmod 777 *</code></p><h6 id="查询服务"><a href="#查询服务" class="headerlink" title="查询服务"></a>查询服务</h6><p><code>ps -ef | grep +服务名</code></p><h6 id="关闭进程"><a href="#关闭进程" class="headerlink" title="关闭进程"></a>关闭进程</h6><p><code>kill -9 +进程号</code></p><h6 id="查看端口号"><a href="#查看端口号" class="headerlink" title="查看端口号"></a>查看端口号</h6><p><code>netstat -tunlp</code></p><h6 id="筛选端口号查询"><a href="#筛选端口号查询" class="headerlink" title="筛选端口号查询"></a>筛选端口号查询</h6><p><code>netstat -tnlp | grep :80</code></p><h6 id="准确查找端口号"><a href="#准确查找端口号" class="headerlink" title="准确查找端口号"></a>准确查找端口号</h6><p><code>netstat -apn | grep 9090</code></p><h6 id="关闭端口号"><a href="#关闭端口号" class="headerlink" title="关闭端口号"></a>关闭端口号</h6><p><code>sudo fuser -k -n tcp 9090</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux运行Spring</title>
+      <link href="/2024/04/21/Linux%E8%BF%90%E8%A1%8CSpring/"/>
+      <url>/2024/04/21/Linux%E8%BF%90%E8%A1%8CSpring/</url>
+      
+        <content type="html"><![CDATA[<p><code>nohup java -jar ***.jar &amp;</code><br><code>tailf nohup.out</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker 安装MySQL</title>
+      <link href="/2024/04/21/Docker%20%E5%AE%89%E8%A3%85MySQL/"/>
+      <url>/2024/04/21/Docker%20%E5%AE%89%E8%A3%85MySQL/</url>
+      
+        <content type="html"><![CDATA[<h6 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h6><p><code>docker pull mysql:8.0</code></p><h6 id="运行-Mysql-容器："><a href="#运行-Mysql-容器：" class="headerlink" title="运行 Mysql 容器："></a>运行 Mysql 容器：</h6><p><code>docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:8.0</code></p><blockquote><p>MYSQL_ROOT_PASSWORD&#x3D;root Mysql数据库root的密码</p></blockquote><h6 id="进入Mysql容器"><a href="#进入Mysql容器" class="headerlink" title="进入Mysql容器"></a>进入Mysql容器</h6><p><code>docker exec -it 658072f495d7 /bin/bash</code><br>![image.png](.&#x2F;Docker 安装MySQL&#x2F;image.png)</p><h6 id="登录Mysql"><a href="#登录Mysql" class="headerlink" title="登录Mysql"></a>登录Mysql</h6><p><code>mysql -uroot -proot</code></p><h6 id="MySQL修改密码"><a href="#MySQL修改密码" class="headerlink" title="MySQL修改密码"></a>MySQL修改密码</h6><p><code>set password for root@localhost = password(&#39;root&#39;);</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Nginx</title>
+      <link href="/2024/04/21/Nginx/"/>
+      <url>/2024/04/21/Nginx/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-nginx反向代理的好处："><a href="#1-nginx反向代理的好处：" class="headerlink" title="1. nginx反向代理的好处："></a>1. nginx反向代理的好处：</h3><ul><li>提高访问速度</li><li>进行负载均衡</li><li>保证后端服务安全<br><img src="202309061715979.png" alt="image.png"></li></ul><h3 id="2-nginx反向代理的配置方式："><a href="#2-nginx反向代理的配置方式：" class="headerlink" title="2. nginx反向代理的配置方式："></a>2. nginx反向代理的配置方式：</h3><p>nginx.conf文件</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">listen 80;</span><br><span class="line">server_name localhost;</span><br><span class="line"></span><br><span class="line">location /api/&#123;</span><br><span class="line">  proxy_pass http://localhost:8080/admin/;  #反向代理</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="3-nginx负载均衡的配置方式："><a href="#3-nginx负载均衡的配置方式：" class="headerlink" title="3. nginx负载均衡的配置方式："></a>3. nginx负载均衡的配置方式：</h3><p>nginx.conf文件</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">upstream webservers&#123;</span><br><span class="line">server 192.168.100.128:8080;</span><br><span class="line">server 192.168.100.129:8080;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server&#123;</span><br><span class="line">listen 80;</span><br><span class="line">server_name localhost;</span><br><span class="line"></span><br><span class="line">location /api/&#123;</span><br><span class="line">  proxy_pass http://localhost:8080/admin/;  #负载均衡</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h5><h6 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h6><p><code>cd /usr/local/nginx/sbin </code></p><h6 id="启动nginx-1"><a href="#启动nginx-1" class="headerlink" title="启动nginx"></a>启动nginx</h6><p><code>./nginx</code></p><h5 id="重启nginx"><a href="#重启nginx" class="headerlink" title="重启nginx"></a>重启nginx</h5><p><code>./nginx -s reload</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CentOS Docker 安装</title>
       <link href="/2024/04/21/CentOS-Docker-%E5%AE%89%E8%A3%85/"/>
       <url>/2024/04/21/CentOS-Docker-%E5%AE%89%E8%A3%85/</url>
